@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <title>AR Elephant</title>
+    <script src="/aframe.min.js"></script>
+    <script src="/aframe-extras.loaders.min.js"></script>
+    <script src="/aframe-ar.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all"/>
+</head>
+<body style="margin: -35px 0px 0px; overflow: hidden; width: 1024px; height: 768px;" class="">
+<a-scene arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;" antialias="false"
+         inspector="url:/aframe-inspector.min.js" class="fullscreen" keyboard-shortcuts="" screenshot="" vr-mode-ui=""
+         aframe-inspector-removed-embedded="undefined">
+    <canvas class="a-canvas" data-aframe-canvas="true" width="600" height="300"></canvas>
+    <a-assets>
+        <img id="my-image" src="/phpdd18-logo.svg">
+    </a-assets>
+    <a-marker preset="hiro" material="" arjs-hit-testing=""
+              position="-0.4445483354153034 0.1396918851418605 -4.992009160930637"
+              rotation="75.03521996228811 179.6003614702088 165.0236101487477"
+              scale="1.0000009142928847 1.0000000909069808 0.9999997021944836">
+        <!--Adding a glTF 2.0 model to your scene-->
+        <a-entity rotation="-59.99999999999999 -90 80"
+                  position="1.4339035716535202 -2.75124081117095 2.0049679341900024" scale="0.8 0.8 0.8"
+                  animation-mixer="" gltf-model="/scene.gltf">
+
+
+        </a-entity>
+        <a-curvedimage src="#my-image" position="1.5691438022411155 -0.15474911703681635 -1.432412436764974"
+                       height="1.0" radius="3" theta-length="22" rotation="29.725 -1.416 -173.395" scale="0.8 0.8 0.8"
+                       material="color:#ff0000" geometry="thetaLength:22"></a-curvedimage>
+    </a-marker>
+
+    <a-entity camera="" data-aframe-inspector-original-camera=""></a-entity>
+
+</a-scene>
+
+
+<video autoplay="" muted="" playsinline=""
+       style="width: 1024px; height: 768px; position: absolute; top: 0px; left: 0px; z-index: -2; margin-left: 0px; margin-top: -35px;"></video>
+</body>
+</html>

@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  nginx:
+    image: prooph/nginx:www
+    ports:
+      - 443:443
+    links:
+      - php:php
+    volumes:
+      - .:/var/www/public
+
+  php:
+    image: prooph/php:7.1-fpm
+    volumes:
+      - .:/var/www
